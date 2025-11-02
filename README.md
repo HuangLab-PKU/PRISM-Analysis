@@ -33,7 +33,7 @@ Developmental analysis of mouse embryos at E12.5-E13.5 stages:
 
 Studies gene expression patterns during embryonic development
 
-> **Note on Data Acquisition:** A facula artifact (visible in `E13.5-AF488-overview.png`) was observed in the E13.5 MouseEmbryo sample. The affected region was omitted from analysis because of this physical artifact.
+> **Note on Data Acquisition:** A facula artifact (visible in `E13.5-AF488-overview.png`) was detected in the E13.5 mouse embryo sample. The affected region was excluded from analysis due to this imaging artifact.
 
 ### HCC2D/ - Human Hepatocellular Carcinoma 2D Analysis (Fig. 4, S30, S31, S33, S34)
 2D spatial transcriptomics analysis of human hepatocellular carcinoma samples:
