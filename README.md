@@ -2,6 +2,10 @@
 
 This repository contains the analysis code and data for the PRISM (Probe-based RNA Imaging for Spatial Transcriptomics) paper. PRISM is a probe-based spatial transcriptomics technology that enables high-resolution, multi-gene simultaneous detection.
 
+For more information, please read the article: 
+- [Nature Biotechnology 2025.10.30](https://doi.org/10.1038/s41587-025-02883-7)
+- [BioArxiv 2024.6.29](https://doi.org/10.1101/2024.06.29.601330).
+
 ## Project Overview
 
 PRISM technology achieves simultaneous detection of multiple gene expression patterns in tissue sections through the design of specific probes combined with fluorescence in situ hybridization (FISH) and imaging technology. This analysis covers various application scenarios from 2D to 3D, including mouse brain, mouse embryo, and human hepatocellular carcinoma samples.
@@ -11,18 +15,25 @@ PRISM technology achieves simultaneous detection of multiple gene expression pat
 ### Methodology/ - Methodological Validation (Fig. S14)
 Contains comparative analysis of PRISM technology with other spatial transcriptomics technologies:
 - **gene_pattern_comparison/**: Gene expression pattern comparison with MERFISH, MERScope, BGI Stereo-seq and other technologies
-- Validates the accuracy and reliability of PRISM technology
+- **Subcellular_Polarity_SPRINTseq.ipynb**: mRNA subcellular polarity check with data from SPRINTseq technology.
+
+Validates the accuracy and reliability of PRISM technology
 
 ### MouseBrain2D/ - Mouse Brain 2D Analysis (Fig. 1, S16)
 2D spatial transcriptomics analysis of mouse brain sections:
 - **PRISM_cell_typing_and_analysis.ipynb**: Cell type identification and spatial analysis
 - **N_cluster_scanpy.py**: Clustering number optimization analysis
-- Demonstrates the application of PRISM in 2D tissue sections
+
+Demonstrates the application of PRISM in 2D tissue sections
 
 ### MouseEmbryo/ - Mouse Embryo Analysis (Fig. 2, 3)
 Developmental analysis of mouse embryos at E12.5-E13.5 stages:
 - **Cell_typing_Embryo.ipynb**: Embryonic cell type identification and spatial distribution analysis
-- Studies gene expression patterns during embryonic development
+- **Check_Cell_Interaction.ipynb**: Cell type interaction calculation of Mouse Embryo
+
+Studies gene expression patterns during embryonic development
+
+> **Note on Data Acquisition:** A facula artifact (visible in `E13.5-AF488-overview.png`) was detected in the E13.5 mouse embryo sample. The affected region was excluded from analysis due to this imaging artifact.
 
 ### HCC2D/ - Human Hepatocellular Carcinoma 2D Analysis (Fig. 4, S30, S31, S33, S34)
 2D spatial transcriptomics analysis of human hepatocellular carcinoma samples:
@@ -31,7 +42,8 @@ Developmental analysis of mouse embryos at E12.5-E13.5 stages:
 - **nhood_enrichment.ipynb**: Neighborhood enrichment analysis
 - **GASTON_demo.ipynb**: GASTON algorithm demonstration
 - **STAGATE_region_define.ipynb**: Spatial region definition
-- Reveals cellular composition and spatial organization of tumor microenvironment
+
+Reveals cellular composition and spatial organization of tumor microenvironment
 
 ### HCC3Dpseudo/ - Human Hepatocellular Carcinoma Pseudo-3D Analysis (Fig. 5, S35, S36, S37, S38)
 3D spatial analysis reconstructed from 2D sections:
@@ -42,7 +54,8 @@ Developmental analysis of mouse embryos at E12.5-E13.5 stages:
 - **roi_variation.ipynb**: Region of interest variation analysis
 - **cell_projection.ipynb**: Cell projection analysis
 - **nhood_enrichment.ipynb**: Neighborhood enrichment analysis
-- Constructs 3D spatial structure model of tumors
+
+Constructs 3D spatial structure model of tumors
 
 ### MouseBrain3D/ - Mouse Brain 3D Analysis (Fig. 6, S41, S42, S43)
 3D spatial transcriptomics analysis of different brain regions in mouse brain:
@@ -52,7 +65,8 @@ Developmental analysis of mouse embryos at E12.5-E13.5 stages:
 - **TH_cell_typing_and_analysis.ipynb**: Thalamic region analysis
 - **subcellular_analysis.ipynb**: Subcellular localization analysis
 - **rna_distribution_cal.ipynb**: RNA distribution calculation
-- Reveals 3D gene expression patterns in different brain regions
+
+Reveals 3D gene expression patterns in different brain regions
 
 ## Technical Features
 
@@ -88,4 +102,4 @@ If you use this analysis code, please cite the relevant PRISM paper.
 
 ## Contact
 
-For questions or suggestions, please contact the project maintainers.
+For questions or suggestions, please contact the project maintainers or raise issues.
